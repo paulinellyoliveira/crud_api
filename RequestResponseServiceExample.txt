@@ -1,0 +1,119 @@
+GET - http://localhost:8080/web/v1/listarProdutos
+Request:  n/a
+
+Response: "Status 200 OK"
+		[
+			
+			{
+				"id": 4,
+				"nomeProduto": "Amaciante concentrado",
+				"quantidade": 80,
+				"valor": 9.25
+			},
+			{
+				"id": 5,
+				"nomeProduto": "Creme dental Colgate",
+				"quantidade": 55,
+				"valor": 5.25
+			},   
+			{
+				"id": 8,
+				"nomeProduto": "Cerveja Eisenbahn Lata",
+				"quantidade": 30,
+				"valor": 2.99
+			},
+			{
+				"id": 9,
+				"nomeProduto": "Caneta esferogrÃ¡fica preta",
+				"quantidade": 80,
+				"valor": 2.99
+			}   
+		]
+
+
+##################################### END
+
+
+GET - http://localhost:8080/web/v1/obterProduto/11
+Request:  n/a
+
+Response: "Status 200 OK"
+		{
+			"id": 11,
+			"nomeProduto": "Caneta esferogrÃ¡fica vermelha",
+			"quantidade": 80,
+			"valor": 2.99
+		}
+	
+	
+##################################### END
+
+
+POST - http://localhost:8080/web/v1/novoProduto
+Request: 
+		{
+			"nomeProduto": "Biscoito recheado Bauduco",
+			"quantidade": 155,
+			"valor": 2.69    
+		} 
+		
+Response: "Status 200 OK"
+		{
+			"id": 13,
+			"nomeProduto": "Biscoito recheado Bauduco",
+			"quantidade": 155,
+			"valor": 2.69
+		}	
+
+
+##################################### END
+
+
+PUT - http://localhost:8080/web/v1/atualizarProduto/13
+Request: 
+		{
+			"nomeProduto": "Biscoito recheado Bauduco",
+			"quantidade": 130,
+			"valor": 2.65    
+		}
+
+Response: "Status 200 OK"
+		{
+			"id": 13,
+			"nomeProduto": "Biscoito recheado Bauduco",
+			"quantidade": 130,
+			"valor": 2.65
+		}
+
+
+##################################### END
+
+
+PUT - http://localhost:8080/web/v1/atualizarQuantidade/13
+Request: 
+		{
+			"quantidade": 100
+		}
+		
+Response: "Status 200 OK"
+	{
+		"id": 13,
+		"nomeProduto": "Biscoito recheado Bauduco",
+		"quantidade": 100,
+		"valor": 2.65
+	}
+
+
+##################################### END
+
+
+DELETE - http://localhost:8080/web/v1/excluirProduto/3
+Request: n/a
+
+Response: "Status 200 OK"
+		{
+			"produto excluido": true
+		}
+
+
+##################################### END
