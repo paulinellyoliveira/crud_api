@@ -1,0 +1,3 @@
+Para executar a aplicação, execute o comando
+npm start
+na pasta raiz da aplicação '/client-application'

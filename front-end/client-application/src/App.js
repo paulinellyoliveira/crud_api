@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import api from "./api";
 
-
 class App extends Component{
   
   state = {
@@ -10,9 +9,7 @@ class App extends Component{
 
   async componentDidMount(){
     const response = await api.get('/v1/listarProdutos');
-
     //console.log(response.data);
-
     this.setState({produtos: response.data});
   }
 
@@ -22,8 +19,7 @@ class App extends Component{
 
     return(
       <div>
-        <h1>Lista de Produtos</h1>
-        {console.log(produtos)}
+        <h1>Lista de Produtos</h1>        
         {produtos.map(produto => (
           <li key={produto.id}>
               <h2>
@@ -42,7 +38,6 @@ class App extends Component{
     );
   };
 };
-
 
 /*function App() {
   return (
