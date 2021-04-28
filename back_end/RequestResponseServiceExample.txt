@@ -1,3 +1,7 @@
+﻿Para executar a aplicação back-end, 
+execute o comando: mvn spring-boot:run
+na pasta raiz, /web-service
+
 GET - http://localhost:8080/web/v1/listarProdutos
 Request:  n/a
 
