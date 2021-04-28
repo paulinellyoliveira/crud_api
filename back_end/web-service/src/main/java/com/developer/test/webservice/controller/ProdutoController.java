@@ -7,6 +7,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -29,12 +30,14 @@ public class ProdutoController {
 	private ProdutoRepository produtoRepository;
 	
 	//método que lista todos os produtos
+	@CrossOrigin
 	@GetMapping("/listarProdutos")
 	public List<Produto> listarProdutos(){
 		return produtoRepository.findAll();
 	}
 	
 	//método que busca o produto na base através do id
+	@CrossOrigin
 	@GetMapping("/obterProduto/{id}")
 	public ResponseEntity<Produto> obterProdutoPorId (@PathVariable (value = "id") Long idProduto) 
 			throws RecursoNaoEncontradoException {
@@ -45,12 +48,14 @@ public class ProdutoController {
 	}
 	
 	//método que grava um novo produto
+	@CrossOrigin
 	@PostMapping("/novoProduto")
 	public Produto novoProduto(@Validated @RequestBody Produto produto) {
 		return produtoRepository.save(produto);
 	}
 	
 	//método que atualiza os dados de um produto através do id
+	@CrossOrigin
 	@PutMapping("/atualizarProduto/{id}")
 	public ResponseEntity<Produto> atualizarProduto (@Validated @PathVariable (value = "id") Long idProduto, 
 			@RequestBody Produto produto) throws RecursoNaoEncontradoException{
@@ -66,6 +71,7 @@ public class ProdutoController {
 	}
 	
 	//método que atualiza a quantidade de um produto através do id
+	@CrossOrigin
 	@PutMapping("/atualizarQuantidade/{id}")
 	public ResponseEntity<Produto> atualizarQuantidadeo (@Validated @PathVariable (value = "id") Long idProduto, 
 			@RequestBody Produto produto) throws RecursoNaoEncontradoException{
@@ -79,6 +85,7 @@ public class ProdutoController {
 	}
 	
 	//método que exclui um produto através do id
+	@CrossOrigin
 	@DeleteMapping("/excluirProduto/{id}")
 	public Map<String, Boolean> excluirProduto(@PathVariable (value = "id") Long idProduto) throws RecursoNaoEncontradoException{
 		Produto produtoEncontrado = produtoRepository.findById(idProduto)
