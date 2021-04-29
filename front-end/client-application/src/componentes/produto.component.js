@@ -169,14 +169,7 @@ export default class Produto extends Component {
                   value={produtoAtual.valor}
                   onChange={this.onChangeValor}
                 />
-              </div>
-
-              <div className="form-group">
-                <label>
-                  <strong>Status:</strong>
-                </label>
-                {produtoAtual.published ? "Published" : "Pending"}
-              </div>
+              </div>              
             </form>
             
             <button
