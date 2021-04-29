@@ -75,15 +75,25 @@ export default class AddProduto extends Component {
     });
   }
 
+  paginaInicial(){
+    this.props.history.push('/produtos');
+  }
+
   render() {
     return (
       <div className="submit-form">
         {this.state.submitted ? (
           <div>
             <h4>Cadastro realizado com sucesso!</h4>
-            <button className="btn btn-success" onClick={this.newProduto}>
-              Adicionar
-            </button>
+            <div>
+              <button className="btn btn-success" onClick={this.newProduto}>
+                Novo
+              </button>
+              <p></p>
+              <button className="btn btn-success" onClick={() => this.paginaInicial()}>
+                Início
+              </button>
+            </div>
           </div>
         ) : (
           <div>
