@@ -133,7 +133,7 @@ export default class ListProduto extends Component {
               </div>
 
               <Link
-                to={"/produto/" + produtoAtual.id}
+                to={"/produtos/" + produtoAtual.id}
                 className="badge badge-warning"
               >
                 Edit
@@ -142,7 +142,7 @@ export default class ListProduto extends Component {
           ) : (
             <div>
               <br />
-              <p>Please click on a Produto...</p>
+              <p>Clique em um produto para exibir os detalhes...</p>
             </div>
           )}
         </div>
