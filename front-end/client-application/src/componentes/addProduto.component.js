@@ -80,9 +80,9 @@ export default class AddProduto extends Component {
       <div className="submit-form">
         {this.state.submitted ? (
           <div>
-            <h4>You submitted successfully!</h4>
+            <h4>Cadastro realizado com sucesso!</h4>
             <button className="btn btn-success" onClick={this.newProduto}>
-              Add
+              Adicionar
             </button>
           </div>
         ) : (

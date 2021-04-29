@@ -22,7 +22,7 @@ class App extends Component {
             </li>
             <li className="nav-item">
               <Link to={"/add"} className="nav-link">
-                Add
+                Novo +
               </Link>
             </li>
           </div>

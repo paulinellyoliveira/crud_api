@@ -121,13 +121,13 @@ export default class ListProduto extends Component {
               </div>
               <div>
                 <label>
-                  <strong>Quantidade:</strong>
+                  <strong>Quantidade (un):</strong>
                 </label>{" "}
                 {produtoAtual.quantidade}
               </div>
               <div>
                 <label>
-                  <strong>Valor:</strong>
+                  <strong>Valor (R$):</strong>
                 </label>{" "}
                 {produtoAtual.valor}
               </div>
@@ -136,7 +136,7 @@ export default class ListProduto extends Component {
                 to={"/produtos/" + produtoAtual.id}
                 className="badge badge-warning"
               >
-                Edit
+                Editar
               </Link>
             </div>
           ) : (
